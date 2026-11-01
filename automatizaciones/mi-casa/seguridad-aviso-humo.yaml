@@ -1,0 +1,63 @@
+# Seguridad - Aviso de humo (versión de mi casa, ampliada respecto al apartado 12.1)
+# Estado: EN USO en la casa del autor. PENDIENTE DE PROBAR con una alarma real
+#         (prueba recomendada: botón de prueba del detector, con todos los móviles cerca).
+# Qué añade al ejemplo del libro: avisa a dos móviles, dice dónde ha saltado,
+#   usa avisos críticos que suenan aunque el móvil esté en silencio y repite el aviso
+#   cada minuto (máximo 5 veces) mientras el detector siga activo.
+# Adapta: las entidades de los detectores, el texto de cada "id" (es el lugar que
+#   sale en el mensaje) y las acciones notify.mobile_app_... de TUS móviles.
+alias: Seguridad - Aviso de humo
+description: >-
+  Aviso crítico a los móviles de casa si salta un detector de humo, diciendo
+  dónde. Se repite cada minuto (máximo 5 veces) mientras siga detectando.
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.humo_pasillo
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: el pasillo
+  - trigger: state
+    entity_id: binary_sensor.humo_buhardilla
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: la buhardilla
+actions:
+  - repeat:
+      sequence:
+        - action: notify.mobile_app_movil_1
+          data:
+            title: 'ALERTA: humo en {{ trigger.id }}'
+            message: >-
+              El detector de humo de {{ trigger.id }} ha saltado. Comprueba la casa ahora.
+            data:
+              ttl: 0                      # Android: entrega inmediata
+              priority: high
+              channel: alarm_stream       # Android: suena aunque el móvil esté en silencio
+              tag: 'alerta-humo-{{ trigger.entity_id }}'   # cada aviso sustituye al anterior
+              push:                       # iPhone: aviso crítico
+                sound:
+                  name: default
+                  critical: 1
+                  volume: 1
+        - action: notify.mobile_app_movil_2
+          data:
+            title: 'ALERTA: humo en {{ trigger.id }}'
+            message: >-
+              El detector de humo de {{ trigger.id }} ha saltado. Comprueba la casa ahora.
+            data:
+              ttl: 0                      # Android: entrega inmediata
+              priority: high
+              channel: alarm_stream       # Android: suena aunque el móvil esté en silencio
+              tag: 'alerta-humo-{{ trigger.entity_id }}'   # cada aviso sustituye al anterior
+              push:                       # iPhone: aviso crítico
+                sound:
+                  name: default
+                  critical: 1
+                  volume: 1
+        - delay: '00:01:00'
+      until:
+        - condition: template
+          value_template: >-
+            {{ is_state(trigger.entity_id, 'off') or repeat.index >= 5 }}
+mode: parallel         # si saltan dos detectores a la vez, avisa de los dos
+max: 4

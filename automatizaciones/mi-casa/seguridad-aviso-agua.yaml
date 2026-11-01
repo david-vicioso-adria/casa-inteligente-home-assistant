@@ -1,0 +1,73 @@
+# Seguridad - Aviso de fuga de agua (versión de mi casa, ampliada respecto al apartado 12.2)
+# Estado: EN USO en la casa del autor. PENDIENTE DE PROBAR con una alarma real
+#         (prueba recomendada: botón de prueba del detector, con todos los móviles cerca).
+# Qué añade al ejemplo del libro: avisa a dos móviles, dice dónde ha saltado,
+#   usa avisos críticos que suenan aunque el móvil esté en silencio y repite el aviso
+#   cada minuto (máximo 5 veces) mientras el detector siga activo.
+# Adapta: las entidades de los detectores, el texto de cada "id" (es el lugar que
+#   sale en el mensaje) y las acciones notify.mobile_app_... de TUS móviles.
+alias: Seguridad - Aviso de fuga de agua
+description: >-
+  Aviso crítico a los móviles de casa si un detector de agua se moja, diciendo
+  dónde. Se repite cada minuto (máximo 5 veces) mientras siga mojado.
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.agua_cocina
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: la cocina
+  - trigger: state
+    entity_id: binary_sensor.agua_terraza
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: la terraza
+  - trigger: state
+    entity_id: binary_sensor.agua_bano_1
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: el baño 1
+  - trigger: state
+    entity_id: binary_sensor.agua_bano_2
+    from: 'off'        # evita avisos falsos al reconectarse tras un corte
+    to: 'on'
+    id: el baño 2
+actions:
+  - repeat:
+      sequence:
+        - action: notify.mobile_app_movil_1
+          data:
+            title: 'ALERTA: agua en {{ trigger.id }}'
+            message: >-
+              El detector de {{ trigger.id }} ha detectado agua. Comprueba si hay una fuga.
+            data:
+              ttl: 0                      # Android: entrega inmediata
+              priority: high
+              channel: alarm_stream       # Android: suena aunque el móvil esté en silencio
+              tag: 'alerta-agua-{{ trigger.entity_id }}'   # cada aviso sustituye al anterior
+              push:                       # iPhone: aviso crítico
+                sound:
+                  name: default
+                  critical: 1
+                  volume: 1
+        - action: notify.mobile_app_movil_2
+          data:
+            title: 'ALERTA: agua en {{ trigger.id }}'
+            message: >-
+              El detector de {{ trigger.id }} ha detectado agua. Comprueba si hay una fuga.
+            data:
+              ttl: 0                      # Android: entrega inmediata
+              priority: high
+              channel: alarm_stream       # Android: suena aunque el móvil esté en silencio
+              tag: 'alerta-agua-{{ trigger.entity_id }}'   # cada aviso sustituye al anterior
+              push:                       # iPhone: aviso crítico
+                sound:
+                  name: default
+                  critical: 1
+                  volume: 1
+        - delay: '00:01:00'
+      until:
+        - condition: template
+          value_template: >-
+            {{ is_state(trigger.entity_id, 'off') or repeat.index >= 5 }}
+mode: parallel         # si saltan dos detectores a la vez, avisa de los dos
+max: 6

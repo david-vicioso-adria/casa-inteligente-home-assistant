@@ -1,0 +1,17 @@
+# Script - Buenas noches (apartado 12.4)
+# Estado: EJEMPLO ILUSTRATIVO del libro.
+# Se crea en Configuración → Automatizaciones y escenas → pestaña Scripts.
+# Si tu alarma pide código, consulta la documentación de su integración.
+alias: Buenas noches
+sequence:
+  - action: light.turn_off
+    target:
+      entity_id:
+        - light.luz_comedor
+        - light.luz_buhardilla
+        - light.luz_terraza_1
+    continue_on_error: true
+  - action: alarm_control_panel.alarm_arm_night
+    target:
+      entity_id: alarm_control_panel.alarma_casa
+mode: single

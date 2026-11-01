@@ -1,0 +1,39 @@
+# Rutina - Buenos días (capítulos 10 y 11)
+# Estado: COMPROBADA en la casa del autor.
+# Qué hace: a las 7:00, de lunes a viernes, si hay alguien en casa,
+# enciende la luz del comedor al 40 % y pone el calefactor del baño en modo calor.
+# Adapta: los dos entity_id de las acciones (búscalos en Configuración → Herramientas para desarrolladores, pestaña Estados).
+# Dónde se pega: Configuración → Automatizaciones y escenas → nueva → menú ⋮ → Editar en YAML.
+alias: Rutina - Buenos días
+description: >-
+  Enciende la luz del comedor al 40 % y el calefactor del baño a las 7:00
+  de lunes a viernes si hay alguien en casa
+triggers:
+  - trigger: time
+    at: "07:00:00"
+conditions:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  # zone.home vale el número de personas en casa: > 0 = hay alguien
+  - condition: numeric_state
+    entity_id: zone.home
+    above: 0
+actions:
+  - action: light.turn_on
+    target:
+      entity_id: light.luz_comedor        # <- tu luz
+    data:
+      brightness_pct: 40
+    continue_on_error: true               # si falla, sigue con la siguiente acción
+  - action: climate.set_hvac_mode
+    target:
+      entity_id: climate.calefactor_bano  # <- tu calefactor
+    data:
+      hvac_mode: heat                     # sin temperatura: usa la que tenga el aparato
+    continue_on_error: true
+mode: single

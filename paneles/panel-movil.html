@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0a1330">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Casa</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --text:#eaf0ff; --muted:#a9b8d9; --green:#7ee2a8; --blue:#6aa8ff; --amber:#f5c26b; --red:#ff7a7a;
+  --card:rgba(255,255,255,0.06); --line:rgba(255,255,255,0.09);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:#0a1330;color:var(--text);font-family:'Outfit',Roboto,'Segoe UI',Arial,sans-serif;-webkit-user-select:none;user-select:none}
+button{font-family:inherit;color:inherit;border:0;background:none;padding:0;text-align:left}
+svg.m{fill:currentColor;stroke:none}
+svg{display:block;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#app{position:fixed;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;
+  background:linear-gradient(160deg,#0a1330 0%,#10224a 55%,#0d1b3d 100%);padding-top:env(safe-area-inset-top)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.muted{color:var(--muted)}
+/* cabecera */
+#top{flex:none;padding:12px 16px 6px}
+#clock{display:flex;justify-content:space-between;align-items:center}
+#clock .t{font-size:44px;font-weight:300;line-height:1;letter-spacing:-1px}
+#clock .d{font-size:15px;color:var(--muted);margin-top:2px}
+.pill{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font-size:13px}
+.pill.ok{color:var(--green)} .pill.warn{color:var(--amber)} .pill.bad{color:var(--red)}
+#people{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.chip{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:14px;background:var(--card);border:1px solid var(--line);min-width:0}
+.avatar{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;flex:none}
+.chip .n{font-size:14px;font-weight:500;line-height:1.1} .chip .s{font-size:12px;color:var(--muted);white-space:nowrap} .chip .s.on{color:var(--green)}
+/* vistas */
+#views{flex:1;min-height:0;overflow:hidden;position:relative}
+#track{display:flex;width:500%;height:100%;transition:transform .3s ease}
+.screen{width:20%;height:100%;overflow-y:auto;overflow-x:hidden;padding:8px 16px 18px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.screen>*{margin-bottom:12px}
+.ct{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:500;margin-bottom:10px}
+.lbl{font-size:13px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.span2{grid-column:1/3}
+/* navegación */
+#nav{flex:none;display:grid;grid-template-columns:repeat(5,1fr);gap:3px;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:rgba(8,16,40,0.9);border-top:1px solid var(--line)}
+.navb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:12px;border:1px solid transparent;font-size:11px;color:var(--muted);padding:6px 0;min-width:0}
+.navb.act{background:rgba(106,168,255,0.14);border-color:rgba(106,168,255,0.5);color:var(--text)}
+/* tiempo */
+.now{display:flex;align-items:center;gap:14px}
+.now .temp{font-size:56px;font-weight:300;line-height:1;letter-spacing:-2px}
+.now .cond{font-size:18px} .now .mm{font-size:13px;color:var(--muted);margin-top:4px}
+.stat{padding:12px 14px}
+.stat .top{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.stat .v{font-size:28px;font-weight:300;line-height:1.1;margin-top:6px}
+.stat .v.sm{font-size:21px;white-space:nowrap}
+.stat .v small{font-size:14px;color:var(--muted);margin-left:3px}
+.stat .sub{font-size:12px;color:var(--muted);min-height:15px;margin-top:2px}
+.strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.hr{flex:none;min-width:62px;background:rgba(255,255,255,0.05);border-radius:14px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px}
+.hr .hn{font-size:12px;color:var(--muted)} .hr .ht{font-size:17px} .hr .hp{font-size:11px;color:var(--blue);min-height:13px}
+.drow{display:grid;grid-template-columns:62px 40px 1fr auto;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}
+.drow:first-of-type{border-top:0}
+.drow .dn{font-size:15px} .drow .tt{font-size:17px;text-align:right} .drow .tt span{color:var(--muted)}
+.drow .pr{font-size:12px;color:var(--blue);text-align:right;min-width:64px}
+/* casa */
+.tile{border-radius:16px;background:rgba(255,255,255,0.07);border:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:84px;color:var(--text)}
+.tile:active{background:rgba(255,255,255,0.16)}
+.tile .nm{font-size:16px;font-weight:500} .tile .stt{font-size:13px;color:var(--muted)}
+.tile.on{background:rgba(245,194,107,0.14);border-color:rgba(245,194,107,0.6)} .tile.on .stt{color:var(--amber)}
+.tile.cool{background:rgba(106,168,255,0.16);border-color:rgba(106,168,255,0.6)}
+.tile.heat{background:rgba(255,140,90,0.16);border-color:rgba(255,140,90,0.6)}
+.tile.na{opacity:.45}
+.trow{display:flex;justify-content:space-between;align-items:flex-start}
+.trow .big{font-size:24px;font-weight:300}
+.routine{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;min-height:64px;padding:10px 14px}
+.routine .ic{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex:none}
+.routine .nm{font-size:17px;font-weight:500} .routine .stt{font-size:12.5px;color:var(--muted);margin-top:1px}
+.routine.run{border-color:var(--blue);background:rgba(106,168,255,0.14)}
+.stack{display:flex;flex-direction:column;gap:10px}
+/* seguridad */
+.abtn{border-radius:16px;background:rgba(255,255,255,0.07);border:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:88px}
+.abtn:active{background:rgba(255,255,255,0.16)}
+.abtn .nm{font-size:17px;font-weight:500} .abtn .stt{font-size:12.5px;color:var(--muted)}
+.abtn.cur{background:rgba(126,226,168,0.13);border-color:rgba(126,226,168,0.6)}
+.cam{display:flex;align-items:center;gap:14px}
+.cam .ic{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(126,226,168,0.14);color:var(--green);flex:none}
+.cam.alert .ic{background:rgba(255,122,122,0.18);color:var(--red)}
+.cam .big{font-size:19px;font-weight:500}
+.det{border-radius:16px;background:rgba(255,255,255,0.07);border:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:92px}
+.det .nm{font-size:16px;font-weight:500} .det .stt{font-size:13px;color:var(--muted)}
+.det.ok{background:rgba(126,226,168,0.12);border-color:rgba(126,226,168,0.55)} .det.ok .stt{color:var(--green)}
+.det.alert{background:rgba(255,122,122,0.22);border-color:var(--red)} .det.alert .stt{color:var(--red);font-weight:500}
+.det.pend{opacity:.5;border-style:dashed}
+.det.na{background:rgba(245,194,107,0.12);border-color:rgba(245,194,107,0.55)} .det.na .stt{color:var(--amber)}
+#alertbar{position:fixed;left:0;right:0;top:0;padding:calc(12px + env(safe-area-inset-top)) 12px 12px;display:none;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#2a0a0a;font-size:18px;font-weight:600;z-index:35;text-align:center}
+#alertbar.show{display:flex}
+/* energia */
+.chart{display:flex;align-items:flex-end;justify-content:space-between;gap:4px;height:196px;padding-top:4px}
+.bcol{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px}
+.bval{font-size:10.5px;color:var(--text)}
+.bars{width:100%;max-width:26px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:6px;overflow:hidden}
+.seg{width:100%}
+.seg.car{background:#f5a25b} .seg.pay{background:#6aa8ff} .seg.sun{background:#7ee2a8} .seg.raw{background:#8da2cf} .seg.cur{background:#8da2cf;opacity:.5}
+.blab{font-size:11px;color:var(--muted)}
+.legend{display:flex;gap:6px 14px;font-size:12px;color:var(--muted);margin-top:10px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.bignum{font-size:36px;font-weight:300;line-height:1.1}
+.bignum small{font-size:16px;color:var(--muted);margin-left:4px}
+.kv{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.kv span:first-child{color:var(--muted);font-size:13.5px}
+.kv span:last-child{text-align:right}
+.kv .g{color:var(--green)}
+.note{font-size:12px;color:var(--muted);line-height:1.35;margin-top:6px}
+/* musica */
+.mpick{display:flex;gap:8px;flex-wrap:wrap}
+.mchip{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid var(--line);font-size:14px}
+.mchip.cur{background:rgba(106,168,255,0.22);border-color:rgba(106,168,255,0.65)}
+.mcover{width:100%;max-width:300px;aspect-ratio:1/1;margin:4px auto 14px;border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.07);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.mcover img{width:100%;height:100%;object-fit:cover;display:block}
+.mtitle{font-size:21px;font-weight:500;line-height:1.2;text-align:center;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.martist{font-size:15px;color:var(--muted);text-align:center;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mprog{margin-top:16px}
+.mbar{height:6px;border-radius:3px;background:rgba(255,255,255,0.12);overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--blue);border-radius:3px;width:0}
+.mtimes{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px}
+.mctl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:10px}
+.mb{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.09);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.mb:active{background:rgba(255,255,255,0.2)}
+.mb.big{width:76px;height:76px;background:rgba(106,168,255,0.26);border-color:rgba(106,168,255,0.7)}
+.mvol{display:flex;align-items:center;gap:12px;margin-top:18px}
+.mvol .mb{width:46px;height:46px}
+.mvol .vb{flex:1}
+.mvol .vt{font-size:12px;color:var(--muted);text-align:center;margin-top:4px}
+.mfoot{display:flex;justify-content:center;margin-top:14px}
+.mfav{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid var(--line);font-size:14px}
+.mfav:active{background:rgba(255,255,255,0.2)}
+.mempty{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 8px;text-align:center}
+.mempty .big{font-size:18px;font-weight:500}
+/* modal, toast, avisos */
+#modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(5,10,25,0.75);display:none;align-items:center;justify-content:center;z-index:20;padding:16px}
+#modal.show{display:flex}
+#mbox{width:100%;max-width:420px;padding:22px;background:#14264f;border:1px solid rgba(255,255,255,0.16);border-radius:22px}
+#mbox h2{margin:0 0 8px;font-size:22px;font-weight:500}
+#mbox p{margin:0 0 18px;font-size:15px;color:var(--muted);line-height:1.4}
+.mbtns{display:flex;gap:12px}
+.mbtn{flex:1;text-align:center;padding:14px;border-radius:14px;background:rgba(255,255,255,0.1);font-size:17px;font-weight:500}
+.mbtn.go{background:rgba(106,168,255,0.28);border:1px solid rgba(106,168,255,0.7)}
+.mbtn:active{background:rgba(255,255,255,0.22)}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.modes .mbtn.cur{background:rgba(106,168,255,0.28);border:1px solid rgba(106,168,255,0.7)}
+.tctl{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.tctl .mbtn{flex:none;width:80px;font-size:28px;padding:8px}
+.tctl .tv{font-size:50px;font-weight:300}
+#toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:rgba(20,38,79,0.96);border:1px solid rgba(255,255,255,0.18);padding:12px 18px;border-radius:999px;font-size:14px;display:none;z-index:30;max-width:90%;text-align:center}
+#dot{position:fixed;right:6px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--green);z-index:15;opacity:0}
+#dot.off{opacity:1;background:var(--red)}
+#over{position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:rgba(5,10,25,0.92);z-index:40;text-align:center;padding:24px}
+#over.show{display:flex}
+#over h2{margin:0;font-size:24px;font-weight:500}
+#over p{margin:0;color:var(--muted);font-size:16px;line-height:1.4}
+#over a{display:inline-block;margin-top:6px;padding:14px 22px;border-radius:14px;background:rgba(106,168,255,0.28);border:1px solid rgba(106,168,255,0.7);color:var(--text);font-size:17px;text-decoration:none}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="dot"></div>
+  <div id="top"><div id="clock"></div><div id="people"></div></div>
+  <div id="views"><div id="track">
+    <div class="screen" id="sc0"></div>
+    <div class="screen" id="sc1"></div>
+    <div class="screen" id="sc2"></div>
+    <div class="screen" id="sc3"></div>
+    <div class="screen" id="sc4"></div>
+  </div></div>
+  <div id="nav"></div>
+  <div id="modal"><div id="mbox"></div></div>
+  <div id="toast"></div>
+  <div id="over"></div>
+  <div id="alertbar"></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+/* =====================================================================
+   CONFIGURACIÓN: cambia estos identificadores por los de TU casa.
+   Los encontrarás en Configuración → Herramientas para desarrolladores (pestaña Estados).
+   Todos los nombres y datos de este archivo son de EJEMPLO.
+   ===================================================================== */
+var E = {
+  weather:'weather.casa', sun:'sun.sun',
+  alarm:'alarm_control_panel.alarma_casa',
+  camera:'binary_sensor.camara_persona',
+  tempCasa:'sensor.alarma_temperatura',
+  humCasa:'sensor.alarma_humedad',
+  /* Sensor exterior propio (opcional). Si no responde, el panel usa la previsión del tiempo. */
+  outTemp:'sensor.exterior_temperatura', outHum:'sensor.exterior_humedad', outBat:'sensor.exterior_bateria',
+  people:[['Persona 1','binary_sensor.presencia_persona_1'],['Persona 2','binary_sensor.presencia_persona_2'],['Persona 3','binary_sensor.presencia_persona_3']],
+  lights:[['Comedor','light.luz_comedor'],['Buhardilla','light.luz_buhardilla'],['Terraza 1','light.luz_terraza_1'],
+          ['Terraza 2','light.luz_terraza_2'],['Techo hab.','light.luz_techo_habitacion'],['Techo grande','light.luz_techo_grande']],
+  fans:[['Vent. hab.','fan.ventilador_habitacion'],['Vent. grande','fan.ventilador_grande']],
+  climates:[['Comedor','climate.aire_comedor'],['Buhardilla','climate.aire_buhardilla'],['Baño','climate.calefactor_bano','Radiador']],
+  scripts:[
+    ['Buenas noches','script.buenas_noches','moon','Apaga las luces y arma la alarma en modo Noche','¿Ejecutar Buenas noches? Apaga todas las luces y arma la alarma.'],
+    ['Salir de casa','script.salir_de_casa','exit','Apaga luces, aire y ventiladores y arma la alarma','¿Ejecutar Salir de casa? Apaga luces, aire y ventiladores, y arma la alarma en modo ausente.'],
+    ['Apagar todas las luces','script.apagar_luces','power','Toda la casa, un toque',null]],
+  /* Música: [nombre, reproductor (media_player), botón de favorita (opcional, o null)].
+     Para añadir otro reproductor (por ejemplo la tablet), copia una línea y cambia los nombres. */
+  music:{players:[['Móvil','media_player.movil','button.movil_cancion_favorita']]},
+  /* Energía: sensores de consumo y de la factura (adapta a tu integración). */
+  energy:{ultimo:'sensor.consumo_ultimo_dia',mes:'sensor.consumo_mes',mesAnt:'sensor.consumo_mes_anterior',factura:'sensor.ultima_factura'},
+  potenciaContratada:'4,6 kW',
+  retrasoDatadis:2,
+  contrato:{tarifa:'Precio fijo · 2.0TD',precioKwh:0.13,fin:'2027-06-30',cuotaPlacasKw:0.5},
+  /* Detectores: [nombre, entidad, tipo, batería]. Entidad null = aún sin instalar ("Pendiente"). */
+  detectors:[['Pasillo','binary_sensor.humo_pasillo','smoke','sensor.humo_pasillo_bateria'],['Buhardilla','binary_sensor.humo_buhardilla','smoke','sensor.humo_buhardilla_bateria'],
+    ['Cocina','binary_sensor.agua_cocina','water','sensor.agua_cocina_bateria'],['Terraza','binary_sensor.agua_terraza','water','sensor.agua_terraza_bateria'],
+    ['Baño 1','binary_sensor.agua_bano_1','water','sensor.agua_bano_1_bateria'],['Baño 2','binary_sensor.agua_bano_2','water','sensor.agua_bano_2_bateria']]
+};
+/* Facturas ya leídas (kWh medidos por el contador, kWh facturados, descuento de las placas, etc.).
+   Si existe /local/panel/facturas.json, sustituye a esta lista. Una entrada por mes. */
+/* Facturas de EJEMPLO (inventadas). */
+var FACT=[
+  {p:'2025-12',medido:420,facturado:420,descuento_kwh:0,excedente_kwh:0,excedente_eur:0,ahorro_eur:0,total:78.10},
+  {p:'2026-01',medido:510,facturado:510,descuento_kwh:0,excedente_kwh:0,excedente_eur:0,ahorro_eur:0,total:92.40},
+  {p:'2026-02',medido:460,facturado:460,descuento_kwh:0,excedente_kwh:0,excedente_eur:0,ahorro_eur:0,total:84.90},
+  {p:'2026-03',medido:390,facturado:350,descuento_kwh:40,excedente_kwh:10,excedente_eur:0.5,ahorro_eur:6.5,total:66.30},
+  {p:'2026-04',medido:330,facturado:270,descuento_kwh:60,excedente_kwh:20,excedente_eur:1.0,ahorro_eur:9.8,total:55.20},
+  {p:'2026-05',medido:340,facturado:275,descuento_kwh:65,excedente_kwh:18,excedente_eur:0.9,ahorro_eur:10.6,total:56.80},
+  {p:'2026-06',medido:520,facturado:455,descuento_kwh:65,excedente_kwh:12,excedente_eur:0.6,ahorro_eur:10.6,total:83.70},
+  {p:'2026-07',medido:640,facturado:575,descuento_kwh:65,excedente_kwh:10,excedente_eur:0.5,ahorro_eur:10.6,total:104.20},
+  {p:'2026-08',medido:600,facturado:530,descuento_kwh:70,excedente_kwh:25,excedente_eur:1.2,ahorro_eur:11.4,total:96.60},
+  {p:'2026-09',medido:480,facturado:415,descuento_kwh:65,excedente_kwh:14,excedente_eur:0.7,ahorro_eur:10.6,total:78.90}
+];
+/* Consumo del coche eléctrico por mes, kWh (EJEMPLO). */
+var CAR={'2026-01':40,'2026-02':38,'2026-03':45,'2026-04':42,'2026-05':50,'2026-06':55,'2026-07':60,'2026-08':58,'2026-09':48,'2026-10':30};
+var CARY={2025:520};
+var IDLE_RETURN_MS = 0;
+var NSCREENS = 5;
+var WATCH = [E.weather,E.sun,E.alarm,E.camera,E.tempCasa,E.humCasa,E.outTemp,E.outHum,E.outBat];
+E.people.concat(E.lights,E.fans,E.climates).forEach(function(x){WATCH.push(x[1]);});
+E.scripts.forEach(function(x){WATCH.push(x[1]);});
+E.music.players.forEach(function(x){ WATCH.push(x[1]); if(x[2]) WATCH.push(x[2]); });
+Object.keys(E.energy).forEach(function(k){WATCH.push(E.energy[k]);});
+E.detectors.forEach(function(d){ if(d[1]) WATCH.push(d[1]); if(d[3]) WATCH.push(d[3]); });
+
+/* ===== Iconos ===== */
+/* Iconos: Material Design Icons (los mismos que usa Home Assistant) */
+var P = {
+ home:'M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z',
+ bulb:'M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z',
+ bulboff:'M12,2C9.76,2 7.78,3.05 6.5,4.68L16.31,14.5C17.94,13.21 19,11.24 19,9A7,7 0 0,0 12,2M3.28,4L2,5.27L5.04,8.3C5,8.53 5,8.76 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H14.73L18.73,22L20,20.72L3.28,4M9,20V21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9Z',
+ lamps:'M10 2L12 9H2L4 2M6 10H8V20H11V22H3V20H6V10M20 8L22 15H12L14 8M16 16H18V20H21V22H13V20H16V16Z',
+ shield:'M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,21C15.75,20 19,15.54 19,11.22V6.3L12,3.18V21Z',
+ shieldlock:'M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z',
+ shieldopen:'M12 1L3 5V11C3 16.5 6.8 21.7 12 23C17.2 21.7 21 16.5 21 11V5L12 1M16 15.8C16 16.4 15.4 17 14.7 17H9.2C8.6 17 8 16.4 8 15.7V12.2C8 11.6 8.6 11 9.2 11V8.5C9.2 7.1 10.6 6 12 6S14.8 7.1 14.8 8.5V9H13.5V8.5C13.5 7.7 12.8 7.2 12 7.2S10.5 7.7 10.5 8.5V11H14.8C15.4 11 16 11.6 16 12.3V15.8Z',
+ climate:'M19 8C20.11 8 21 8.9 21 10V16.76C21.61 17.31 22 18.11 22 19C22 20.66 20.66 22 19 22C17.34 22 16 20.66 16 19C16 18.11 16.39 17.31 17 16.76V10C17 8.9 17.9 8 19 8M19 9C18.45 9 18 9.45 18 10V11H20V10C20 9.45 19.55 9 19 9M5 20V12H2L12 3L16.4 6.96C15.54 7.69 15 8.78 15 10V16C14.37 16.83 14 17.87 14 19L14.1 20H5Z',
+ snow:'M20.79,13.95L18.46,14.57L16.46,13.44V10.56L18.46,9.43L20.79,10.05L21.31,8.12L19.54,7.65L20,5.88L18.07,5.36L17.45,7.69L15.45,8.82L13,7.38V5.12L14.71,3.41L13.29,2L12,3.29L10.71,2L9.29,3.41L11,5.12V7.38L8.5,8.82L6.5,7.69L5.92,5.36L4,5.88L4.47,7.65L2.7,8.12L3.22,10.05L5.55,9.43L7.55,10.56V13.45L5.55,14.58L3.22,13.96L2.7,15.89L4.47,16.36L4,18.12L5.93,18.64L6.55,16.31L8.55,15.18L11,16.62V18.88L9.29,20.59L10.71,22L12,20.71L13.29,22L14.7,20.59L13,18.88V16.62L15.5,15.17L17.5,16.3L18.12,18.63L20,18.12L19.53,16.35L21.3,15.88L20.79,13.95M9.5,10.56L12,9.11L14.5,10.56V13.44L12,14.89L9.5,13.44V10.56Z',
+ flame:'M17.66 11.2C17.43 10.9 17.15 10.64 16.89 10.38C16.22 9.78 15.46 9.35 14.82 8.72C13.33 7.26 13 4.85 13.95 3C13 3.23 12.17 3.75 11.46 4.32C8.87 6.4 7.85 10.07 9.07 13.22C9.11 13.32 9.15 13.42 9.15 13.55C9.15 13.77 9 13.97 8.8 14.05C8.57 14.15 8.33 14.09 8.14 13.93C8.08 13.88 8.04 13.83 8 13.76C6.87 12.33 6.69 10.28 7.45 8.64C5.78 10 4.87 12.3 5 14.47C5.06 14.97 5.12 15.47 5.29 15.97C5.43 16.57 5.7 17.17 6 17.7C7.08 19.43 8.95 20.67 10.96 20.92C13.1 21.19 15.39 20.8 17.03 19.32C18.86 17.66 19.5 15 18.56 12.72L18.43 12.46C18.22 12 17.66 11.2 17.66 11.2M14.5 17.5C14.22 17.74 13.76 18 13.4 18.1C12.28 18.5 11.16 17.94 10.5 17.28C11.69 17 12.4 16.12 12.61 15.23C12.78 14.43 12.46 13.77 12.33 13C12.21 12.26 12.23 11.63 12.5 10.94C12.69 11.32 12.89 11.7 13.13 12C13.9 13 15.11 13.44 15.37 14.8C15.41 14.94 15.43 15.08 15.43 15.23C15.46 16.05 15.1 16.95 14.5 17.5H14.5Z',
+ fan:'M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12.5,2C17,2 17.11,5.57 14.75,6.75C13.76,7.24 13.32,8.29 13.13,9.22C13.61,9.42 14.03,9.73 14.35,10.13C18.05,8.13 22.03,8.92 22.03,12.5C22.03,17 18.46,17.1 17.28,14.73C16.78,13.74 15.72,13.3 14.79,13.11C14.59,13.59 14.28,14 13.88,14.34C15.87,18.03 15.08,22 11.5,22C7,22 6.91,18.42 9.27,17.24C10.25,16.75 10.69,15.71 10.89,14.79C10.4,14.59 9.97,14.27 9.65,13.87C5.96,15.85 2,15.07 2,11.5C2,7 5.56,6.89 6.74,9.26C7.24,10.25 8.29,10.68 9.22,10.87C9.41,10.39 9.73,9.97 10.14,9.65C8.15,5.96 8.94,2 12.5,2Z',
+ moon:'M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z',
+ exit:'M13.34,8.17C12.41,8.17 11.65,7.4 11.65,6.47A1.69,1.69 0 0,1 13.34,4.78C14.28,4.78 15.04,5.54 15.04,6.47C15.04,7.4 14.28,8.17 13.34,8.17M10.3,19.93L4.37,18.75L4.71,17.05L8.86,17.9L10.21,11.04L8.69,11.64V14.5H7V10.54L11.4,8.67L12.07,8.59C12.67,8.59 13.17,8.93 13.5,9.44L14.36,10.79C15.04,12 16.39,12.82 18,12.82V14.5C16.14,14.5 14.44,13.67 13.34,12.4L12.84,14.94L14.61,16.63V23H12.92V17.9L11.14,16.21L10.3,19.93M21,23H19V3H6V16.11L4,15.69V1H21V23M6,23H4V19.78L6,20.2V23Z',
+ power:'M13,3H11V13H13V3M17.83,5.17L16.41,6.59C18.05,7.91 19,9.9 19,12A7,7 0 0,1 12,19C8.14,19 5,15.88 5,12C5,9.91 5.95,7.91 7.58,6.58L6.17,5.17C2.38,8.39 1.92,14.07 5.14,17.86C8.36,21.64 14.04,22.1 17.83,18.88C19.85,17.17 21,14.65 21,12C21,9.37 19.84,6.87 17.83,5.17Z',
+ cam:'M6.03 12.03L8.03 15.5L5.5 18.68L2 12.62L6.03 12.03M17 18V15.29C17.88 14.9 18.5 14.03 18.5 13C18.5 12.43 18.3 11.9 17.97 11.5L19.94 10.35C20.95 9.76 21.3 8.47 20.71 7.46L19.33 5.06C18.74 4.05 17.45 3.7 16.44 4.28L8.31 9C7.36 9.53 7.03 10.75 7.58 11.71L9.08 14.31C9.63 15.26 10.86 15.59 11.81 15.04L13.69 13.96C13.94 14.55 14.41 15.03 15 15.29V18C15 19.1 15.9 20 17 20H22V18H17Z',
+ bolt:'M11 15H6L13 1V9H18L11 23V15Z',
+ drop:'M12,3.25C12,3.25 6,10 6,14C6,17.32 8.69,20 12,20A6,6 0 0,0 18,14C18,10 12,3.25 12,3.25M14.47,9.97L15.53,11.03L9.53,17.03L8.47,15.97M9.75,10A1.25,1.25 0 0,1 11,11.25A1.25,1.25 0 0,1 9.75,12.5A1.25,1.25 0 0,1 8.5,11.25A1.25,1.25 0 0,1 9.75,10M14.25,14.5A1.25,1.25 0 0,1 15.5,15.75A1.25,1.25 0 0,1 14.25,17A1.25,1.25 0 0,1 13,15.75A1.25,1.25 0 0,1 14.25,14.5Z',
+ wateralert:'M10 3.25C10 3.25 16 10 16 14C16 17.31 13.31 20 10 20S4 17.31 4 14C4 10 10 3.25 10 3.25M20 7V13H18V7H20M18 17H20V15H18V17Z',
+ gauge:'M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,14.4 19,16.5 17.3,18C15.9,16.7 14,16 12,16C10,16 8.2,16.7 6.7,18C5,16.5 4,14.4 4,12A8,8 0 0,1 12,4M14,5.89C13.62,5.9 13.26,6.15 13.1,6.54L11.81,9.77L11.71,10C11,10.13 10.41,10.6 10.14,11.26C9.73,12.29 10.23,13.45 11.26,13.86C12.29,14.27 13.45,13.77 13.86,12.74C14.12,12.08 14,11.32 13.57,10.76L13.67,10.5L14.96,7.29L14.97,7.26C15.17,6.75 14.92,6.17 14.41,5.96C14.28,5.91 14.15,5.89 14,5.89M10,6A1,1 0 0,0 9,7A1,1 0 0,0 10,8A1,1 0 0,0 11,7A1,1 0 0,0 10,6M7,9A1,1 0 0,0 6,10A1,1 0 0,0 7,11A1,1 0 0,0 8,10A1,1 0 0,0 7,9M17,9A1,1 0 0,0 16,10A1,1 0 0,0 17,11A1,1 0 0,0 18,10A1,1 0 0,0 17,9Z',
+ wind:'M4,10A1,1 0 0,1 3,9A1,1 0 0,1 4,8H12A2,2 0 0,0 14,6A2,2 0 0,0 12,4C11.45,4 10.95,4.22 10.59,4.59C10.2,5 9.56,5 9.17,4.59C8.78,4.2 8.78,3.56 9.17,3.17C9.9,2.45 10.9,2 12,2A4,4 0 0,1 16,6A4,4 0 0,1 12,10H4M19,12A1,1 0 0,0 20,11A1,1 0 0,0 19,10C18.72,10 18.47,10.11 18.29,10.29C17.9,10.68 17.27,10.68 16.88,10.29C16.5,9.9 16.5,9.27 16.88,8.88C17.42,8.34 18.17,8 19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14H5A1,1 0 0,1 4,13A1,1 0 0,1 5,12H19M18,18H4A1,1 0 0,1 3,17A1,1 0 0,1 4,16H18A3,3 0 0,1 21,19A3,3 0 0,1 18,22C17.17,22 16.42,21.66 15.88,21.12C15.5,20.73 15.5,20.1 15.88,19.71C16.27,19.32 16.9,19.32 17.29,19.71C17.47,19.89 17.72,20 18,20A1,1 0 0,0 19,19A1,1 0 0,0 18,18Z',
+ sun:'M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13',
+ therm:'M15 13V5A3 3 0 0 0 9 5V13A5 5 0 1 0 15 13M12 4A1 1 0 0 1 13 5V8H11V5A1 1 0 0 1 12 4Z',
+ clock:'M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z',
+ smoke:'M12 4C16.41 4 20 7.59 20 12S16.41 20 12 20 4 16.41 4 12 7.59 4 12 4M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 11C11.45 11 11 11.45 11 12S11.45 13 12 13 13 12.55 13 12 12.55 11 12 11M10.72 9.3C11.11 9.11 11.54 9 12 9S12.89 9.11 13.29 9.3L14 8.57C13.43 8.22 12.74 8 12 8S10.58 8.22 10 8.57L10.72 9.3M15 12C15 12.46 14.89 12.89 14.7 13.29L15.43 14C15.79 13.43 16 12.74 16 12S15.79 10.58 15.43 10L14.7 10.72C14.89 11.11 15 11.54 15 12M9 12C9 11.54 9.11 11.11 9.3 10.72L8.57 10C8.22 10.58 8 11.26 8 12S8.22 13.43 8.57 14L9.3 13.29C9.11 12.89 9 12.46 9 12M13.29 14.7C12.89 14.89 12.46 15 12 15S11.11 14.89 10.72 14.7L10 15.43C10.58 15.79 11.26 16 12 16S13.43 15.79 14 15.43L13.29 14.7M16.89 8.53L16.17 9.25C16.69 10.04 17 11 17 12S16.69 13.96 16.17 14.75L16.89 15.47C17.59 14.5 18 13.3 18 12S17.59 9.5 16.89 8.53M9.25 7.83C10.04 7.31 11 7 12 7S13.96 7.31 14.75 7.83L15.47 7.11C14.5 6.42 13.3 6 12 6S9.5 6.42 8.53 7.11L9.25 7.83M14.75 16.17C13.96 16.69 13 17 12 17S10.04 16.69 9.25 16.17L8.53 16.89C9.5 17.59 10.7 18 12 18S14.5 17.59 15.47 16.89L14.75 16.17M7.83 14.75C7.31 13.96 7 13 7 12S7.31 10.04 7.83 9.25L7.11 8.53C6.42 9.5 6 10.7 6 12S6.42 14.5 7.11 15.47L7.83 14.75Z',
+ cloud:'M6.5 20Q4.22 20 2.61 18.43 1 16.85 1 14.58 1 12.63 2.17 11.1 3.35 9.57 5.25 9.15 5.88 6.85 7.75 5.43 9.63 4 12 4 14.93 4 16.96 6.04 19 8.07 19 11 20.73 11.2 21.86 12.5 23 13.78 23 15.5 23 17.38 21.69 18.69 20.38 20 18.5 20M6.5 18H18.5Q19.55 18 20.27 17.27 21 16.55 21 15.5 21 14.45 20.27 13.73 19.55 13 18.5 13H17V11Q17 8.93 15.54 7.46 14.08 6 12 6 9.93 6 8.46 7.46 7 8.93 7 11H6.5Q5.05 11 4.03 12.03 3 13.05 3 14.5 3 15.95 4.03 17 5.05 18 6.5 18M12 12Z',
+ car:'M18.92 2C18.72 1.42 18.16 1 17.5 1H6.5C5.84 1 5.29 1.42 5.08 2L3 8V16C3 16.55 3.45 17 4 17H5C5.55 17 6 16.55 6 16V15H18V16C18 16.55 18.45 17 19 17H20C20.55 17 21 16.55 21 16V8L18.92 2M6.5 12C5.67 12 5 11.33 5 10.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12M17.5 12C16.67 12 16 11.33 16 10.5S16.67 9 17.5 9 19 9.67 19 10.5 18.33 12 17.5 12M5 7L6.5 2.5H17.5L19 7H5M7 20H11V18L17 21H13V23L7 20Z',
+ music:'M21,3V15.5A3.5,3.5 0 0,1 17.5,19A3.5,3.5 0 0,1 14,15.5A3.5,3.5 0 0,1 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L9,8.6V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V6L21,3Z',
+ play:'M8,5.14V19.14L19,12.14L8,5.14Z',
+ pause:'M14,19H18V5H14M6,19H10V5H6V19Z',
+ skipnext:'M16,18H18V6H16M6,18L14.5,12L6,6V18Z',
+ skipprev:'M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z',
+ volminus:'M3,9H7L12,4V20L7,15H3V9M14,11H22V13H14V11Z',
+ volplus:'M3,9H7L12,4V20L7,15H3V9M14,11H17V8H19V11H22V13H19V16H17V13H14V11Z',
+ voloff:'M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z',
+ heart:'M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z',
+ musicoff:'M4.27 3L3 4.27L12 13.27V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17S7.79 21 10 21 14 19.21 14 17V15.27L19.73 21L21 19.73L4.27 3M14 7H18V3H12V8.18L14 10.18Z'
+};
+function ic(n,s,c){ return '<svg class="m" width="'+s+'" height="'+s+'" viewBox="0 0 24 24"'+(c?' style="color:'+c+'"':'')+'>'+'<path d="'+P[n]+'"/></svg>'; }
+var C={yellow:'#ffc928',orange:'#ff7a45',slate:'#8fa8bd',cloud:'#c3cde0',green:'#7ee2a8',blue:'#6aa8ff',pink:'#ff8fb1'};
+function alIcon(){ var a=String(st(E.alarm)); return a==='disarmed'?'shieldopen':(a.indexOf('armed')===0?'shieldlock':'shield'); }
+function wicon(cond,s){
+  var sun='<circle cx="12" cy="12" r="4" fill="#f5c26b" stroke="#f5c26b"/><path stroke="#f5c26b" d="M12 2v2M12 20v2M2 12h2M20 12h2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/>';
+  var cloud='<path stroke="#cfd9f2" d="M7 19a4 4 0 0 1-.5-8A5.500 5.500 0 0 1 17 12.500 3.300 3.300 0 0 1 17 19z"/>';
+  var cl2='<path stroke="#cfd9f2" d="M7 16a4 4 0 0 1-.5-8A5.500 5.500 0 0 1 17 9.500 3.300 3.300 0 0 1 17 16z"/>';
+  var g;
+  switch(cond){
+   case 'sunny': g=sun; break;
+   case 'clear-night': g='<path stroke="#cfd9f2" d="M20 14.500A8.500 8.500 0 0 1 9.500 4a8.500 8.500 0 1 0 10.500 10.500z"/>'; break;
+   case 'partlycloudy': g='<g transform="translate(3,-1) scale(.62)">'+sun+'</g><g transform="translate(0.5,2) scale(.85)">'+cloud+'</g>'; break;
+   case 'cloudy': g=cloud; break;
+   case 'rainy': g=cl2+'<path stroke="#6aa8ff" d="M8 19l-1 2M12 19l-1 2M16 19l-1 2"/>'; break;
+   case 'pouring': g=cl2+'<path stroke="#6aa8ff" d="M8 18l-1.500 3.500M12 18l-1.500 3.500M16 18l-1.500 3.500"/>'; break;
+   case 'snowy': case 'snowy-rainy': case 'hail': g=cl2+'<path stroke="#bcd7ff" d="M8 19h.01M12 20h.01M16 19h.01M10 22h.01M14 22h.01"/>'; break;
+   case 'lightning': case 'lightning-rainy': g=cl2+'<path stroke="#f5c26b" d="M12 15l-2 3h3l-2 3"/>'; break;
+   case 'fog': g='<path stroke="#cfd9f2" d="M4 9h16M3 13h18M5 17h14"/>'; break;
+   case 'windy': case 'windy-variant': g='<path stroke="#cfd9f2" d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/>'; break;
+   default: g=cloud;
+  }
+  return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24">'+g+'</svg>';
+}
+var COND={'sunny':'Soleado','clear-night':'Despejado','partlycloudy':'Poco nuboso','cloudy':'Nublado','rainy':'Lluvioso','pouring':'Lluvia fuerte',
+ 'snowy':'Nieve','snowy-rainy':'Aguanieve','hail':'Granizo','lightning':'Tormenta','lightning-rainy':'Tormenta con lluvia','fog':'Niebla',
+ 'windy':'Ventoso','windy-variant':'Ventoso','exceptional':'Excepcional'};
+/* ===== Estado ===== */
+var S={}, forecast=null, hourly=null, hourlyErr=false, screen=0, connected=false, idleT=null, mpSel=0;
+function st(id){return S[id]?S[id].s:undefined;}
+function at(id,k){var e=S[id];return e&&e.a?e.a[k]:undefined;}
+function isNum(v){return v!==undefined&&v!==null&&v!==''&&v!=='unknown'&&v!=='unavailable'&&!isNaN(parseFloat(v));}
+function fmt(v,d){ if(!isNum(v)) return 'sin datos'; var n=parseFloat(v); return (d===undefined?(Math.round(n*10)/10):n.toFixed(d)).toString().replace('.',','); }
+function val(id,d){ var s=st(id); if(!isNum(s)) return 'sin datos'; var u=(at(id,'unit_of_measurement')||'').replace('EUR','€'); return fmt(s,d)+(u?' '+u:''); }
+function pad(n){return n<10?'0'+n:''+n;}
+var DIAS=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'], DC=['dom','lun','mar','mié','jue','vie','sáb'];
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+function hhmm(iso){ if(!iso) return '--:--'; var d=new Date(iso); if(isNaN(d.getTime())) return '--:--'; return pad(d.getHours())+':'+pad(d.getMinutes()); }
+function cardinal(b){ if(!isNum(b)) return (typeof b==='string'&&b)?b:''; var a=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSO','SO','OSO','O','ONO','NO','NNO']; return a[Math.round(parseFloat(b)/22.5)%16]; }
+function bad(s){return s===undefined||s==='unavailable'||s==='unknown';}
+function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+/* ===== Pantallas (versión móvil) ===== */
+function headerClock(){
+  var n=new Date(), a=ALM[st(E.alarm)]||['sin datos','warn'];
+  return '<div><div class="t">'+pad(n.getHours())+':'+pad(n.getMinutes())+'</div><div class="d">'+DIAS[n.getDay()]+', '+n.getDate()+' de '+MESES[n.getMonth()]+'</div></div>'+
+    '<button class="pill '+a[1]+'" data-act="goto" data-n="2">'+ic(alIcon(),18)+'<span>'+a[0]+'</span></button>';
+}
+var ALM={disarmed:['Desarmada','ok'],armed_home:['Armada en casa','ok'],armed_away:['Armada ausente','ok'],armed_night:['Armada noche','ok'],
+  arming:['Armando…','warn'],pending:['Pendiente','warn'],triggered:['¡DISPARADA!','bad']};
+function headerPeople(){
+  var h='';
+  E.people.forEach(function(p){
+    var s=st(p[1]); var t=bad(s)?'sin datos':(s==='on'?'En casa':'Fuera');
+    h+='<div class="chip"><div class="avatar">'+p[0].charAt(0)+'</div><div><div class="n">'+p[0]+'</div><div class="s'+(s==='on'?' on':'')+'">'+t+'</div></div></div>';
+  });
+  return h;
+}
+function headerNav(){
+  var items=[['cloud','Tiempo',C.cloud],['lamps','Casa',C.yellow],['shield','Seguridad',C.slate],['bolt','Energía',C.yellow],['music','Música',C.pink]], h='';
+  items.forEach(function(it,i){ h+='<button class="navb'+(i===screen?' act':'')+'" data-act="goto" data-n="'+i+'">'+ic(it[0],24,it[2])+'<span>'+it[1]+'</span></button>'; });
+  return h;
+}
+function stat(icon,label,value,sub,small,cls){
+  return '<div class="card stat'+(cls?' '+cls:'')+'"><div class="top">'+ic(icon,18)+'<span>'+label+'</span></div><div class="v'+(small?' sm':'')+'">'+value+'</div><div class="sub">'+(sub||'')+'</div></div>';
+}
+function hoursHtml(n,sz){
+  if(!hourly||!hourly.length) return '<div class="lbl" style="padding:8px 0">'+(hourlyErr?'Previsión por horas no disponible':'Cargando previsión…')+'</div>';
+  var now=Date.now(), list=hourly.filter(function(x){return new Date(x.datetime).getTime()>now-3600000;}).slice(0,n), h='';
+  list.forEach(function(x,i){
+    var dt=new Date(x.datetime), pp=x.precipitation_probability;
+    h+='<div class="hr"><div class="hn">'+(i===0?'Ahora':pad(dt.getHours())+':00')+'</div>'+wicon(x.condition,sz)+'<div class="ht">'+fmt(x.temperature,0)+'°</div><div class="hp">'+(isNum(pp)&&pp>0?fmt(pp,0)+' %':'&nbsp;')+'</div></div>';
+  });
+  return h;
+}
+function outInfo(){
+  var t=st(E.outTemp), hu=st(E.outHum), b=st(E.outBat), r={t:isNum(t)?parseFloat(t):null, h:isNum(hu)?parseFloat(hu):null, bat:'', low:false};
+  if(!bad(b)){ var bl=String(b).toLowerCase(); r.low=(bl==='low'||(isNum(b)&&parseFloat(b)<=20)); r.bat=(BAT[bl]||(isNum(b)?fmt(b,0)+' %':b)); }
+  return r;
+}
+function screen0(){
+  var o=outInfo(), w=E.weather, cond=st(w), prevT=at(w,'temperature'), temp=(o.t!==null?o.t:prevT), tu=at(w,'temperature_unit')||'°C';
+  var f0=forecast&&forecast[0], hi=f0?f0.temperature:undefined, lo=f0?f0.templow:undefined;
+  var h='<div class="card now">'+wicon(bad(cond)?'cloudy':cond,76)+'<div><div class="temp">'+(isNum(temp)?fmt(temp,1):'--')+'<span style="font-size:22px;color:var(--muted)">'+(isNum(temp)?' '+tu:'')+'</span></div>'+
+    '<div class="cond">'+(COND[cond]||(bad(cond)?'sin datos':cond))+'</div><div class="mm">'+(isNum(lo)||isNum(hi)?'Mín '+fmt(lo,0)+'° · Máx '+fmt(hi,0)+'° · ':'')+((o.t!==null?'Sensor propio'+(isNum(prevT)?' · Previsión '+fmt(prevT,1)+'°':''):'Previsión'))+' · El Prat</div></div></div>';
+  var hum=(o.h!==null?o.h:at(w,'humidity')), humSub=(o.low?'⚠ Batería baja ('+o.bat+')':(o.h!==null?'Sensor propio':'Previsión')), pr=at(w,'pressure'), ws=at(w,'wind_speed'), wg=at(w,'wind_gust_speed');
+  var wsu=at(w,'wind_speed_unit')||'km/h', pu=at(w,'pressure_unit')||'hPa';
+  h+='<div class="grid2">'+
+    stat('drop','Humedad exterior',isNum(hum)?fmt(hum,0)+'<small>%</small>':'sin datos',humSub)+
+    stat('gauge','Presión',isNum(pr)?fmt(pr,0)+'<small>'+pu+'</small>':'sin datos','')+
+    stat('wind','Viento',isNum(ws)?fmt(ws,0)+'<small>'+wsu+'</small>':'sin datos',isNum(wg)?'Rachas '+fmt(wg,0)+' '+wsu:'')+
+    stat('sun','Sol',hhmm(at(E.sun,'next_rising'))+' · '+hhmm(at(E.sun,'next_setting')),'Salida · Puesta',true)+
+    stat('therm','Temp. en casa',isNum(st(E.tempCasa))?fmt(st(E.tempCasa))+'<small>°C</small>':'sin datos','Alarma, comedor')+
+    stat('drop','Humedad en casa',isNum(st(E.humCasa))?fmt(st(E.humCasa),0)+'<small>%</small>':'sin datos','Alarma, comedor')+'</div>';
+  h+='<div class="card"><div class="ct">'+ic('clock',20)+'Próximas horas</div><div class="strip">'+hoursHtml(12,30)+'</div></div>';
+  h+='<div class="card"><div class="ct">'+ic('cloud',22,C.cloud)+'Próximos días</div>';
+  if(forecast&&forecast.length){
+    var start=forecast.length>6?1:0;
+    forecast.slice(start,start+5).forEach(function(d){
+      var dt=new Date(d.datetime), pp=d.precipitation_probability;
+      h+='<div class="drow"><div class="dn">'+DC[dt.getDay()]+' '+dt.getDate()+'</div>'+wicon(d.condition,32)+'<div class="pr">'+(isNum(pp)&&pp>0?'Lluvia '+fmt(pp,0)+' %':'')+'</div><div class="tt">'+fmt(d.temperature,0)+'°'+(isNum(d.templow)?' <span>'+fmt(d.templow,0)+'°</span>':'')+'</div></div>';
+    });
+  } else h+='<div class="lbl">Cargando previsión…</div>';
+  return h+'</div>';
+}
+function lightTile(n,id,icon){
+  var s=st(id), cls=bad(s)?'na':(s==='on'?'on':'');
+  return '<button class="tile '+cls+'" data-act="toggle" data-ent="'+id+'">'+ic(s==='on'?'bulb':'bulboff',26,s==='on'?C.yellow:null)+'<div><div class="nm">'+n+'</div><div class="stt">'+(bad(s)?'No disponible':(s==='on'?'Encendida':'Apagada'))+'</div></div></button>';
+}
+var HV={off:'Apagado',cool:'Frío',heat:'Calor',dry:'Seco',fan_only:'Ventilador',auto:'Auto',heat_cool:'Auto'};
+function climTile(n,id){
+  var s=st(id), cls=bad(s)?'na':(s==='cool'?'cool':(s==='heat'?'heat':'')), cur=at(id,'current_temperature'), tg=at(id,'temperature');
+  var icon=s==='heat'?'flame':(s==='off'||bad(s)?'power':'snow');
+  return '<button class="tile '+cls+'" data-act="climate" data-ent="'+id+'"><div class="trow">'+ic(icon,26,s==='cool'?'#6aa8ff':(s==='heat'?'#ff8c5a':null))+'<div class="big">'+(isNum(cur)?fmt(cur)+'°':'')+'</div></div><div><div class="nm">'+n+'</div><div class="stt">'+(bad(s)?'No disponible':(HV[s]||s)+(s!=='off'&&isNum(tg)?' · '+fmt(tg)+'°':''))+'</div></div></button>';
+}
+function screen1(){
+  var h='<div class="card"><div class="ct">'+ic('home',20)+'Rutinas</div><div class="stack">';
+  E.scripts.forEach(function(r){
+    var run=st(r[1])==='on';
+    h+='<button class="tile routine'+(run?' run':'')+'" data-act="script" data-ent="'+r[1]+'" data-ask="'+(r[4]||'').replace(/"/g,'&quot;')+'" data-name="'+r[0]+'"><div class="ic">'+ic(r[2],24)+'</div><div><div class="nm">'+r[0]+'</div><div class="stt">'+(run?'En curso…':r[3])+'</div></div></button>';
+  });
+  h+='</div></div><div class="card"><div class="ct">'+ic('lamps',22,C.yellow)+'Luces</div><div class="grid2">';
+  E.lights.forEach(function(l){h+=lightTile(l[0],l[1],'bulb');});
+  h+='</div></div><div class="card"><div class="ct">'+ic('climate',22,C.orange)+'Climatización</div><div class="grid2">';
+  E.climates.forEach(function(c){h+=climTile(c[2]?c[2]+' '+c[0].toLowerCase():'Aire '+c[0].toLowerCase(),c[1]);});
+  h+='</div></div><div class="card"><div class="ct">'+ic('fan',20)+'Ventiladores</div><div class="grid2">';
+  E.fans.forEach(function(f){
+    var s=st(f[1]), cls=bad(s)?'na':(s==='on'?'on':'');
+    h+='<button class="tile '+cls+'" data-act="toggle" data-ent="'+f[1]+'">'+ic('fan',26,s==='on'?'#f5c26b':null)+'<div><div class="nm">'+f[0]+'</div><div class="stt">'+(bad(s)?'No disponible':(s==='on'?'Encendido':'Apagado'))+'</div></div></button>';
+  });
+  return h+'</div></div>';
+}
+function detState(d){
+  if(!d[1]) return ['pend','Pendiente'];
+  var v=st(d[1]);
+  if(bad(v)) return ['na','No disponible'];
+  if(v==='on') return ['alert',d[2]==='smoke'?'¡HUMO DETECTADO!':'¡FUGA DE AGUA!'];
+  return ['ok',d[2]==='smoke'?'Sin humo':'Sin fugas'];
+}
+var BAT={low:'baja',middle:'media',medium:'media',high:'alta',full:'completa'};
+function batInfo(d){
+  if(!d[3]) return null; var v=st(d[3]); if(bad(v)) return null;
+  var t=BAT[String(v).toLowerCase()]; var low=(String(v).toLowerCase()==='low'||(isNum(v)&&parseFloat(v)<=20));
+  return {txt:'Batería '+(t||(isNum(v)?fmt(v,0)+' %':v)),low:low};
+}
+function alertHtml(){
+  var a=[]; E.detectors.forEach(function(d){ if(d[1]&&st(d[1])==='on') a.push(d[2]==='smoke'?'HUMO ('+d[0]+')':'FUGA DE AGUA ('+d[0]+')'); });
+  return a.length?ic('smoke',28)+'<span>¡ALERTA! '+a.join(' · ')+'</span>':'';
+}
+function screen2(){
+  var a=st(E.alarm), cam=st(E.camera);
+  var modes=[['Casa','Parcial día','alarm_arm_home','armed_home','home'],['Fuera','Total','alarm_arm_away','armed_away','exit'],['Noche','Parcial noche','alarm_arm_night','armed_night','moon'],['Desarmar','Quitar alarma','alarm_disarm','disarmed','shieldopen']];
+  var info=ALM[a]||['sin datos','warn'];
+  var h='<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div class="ct" style="margin:0">'+ic(alIcon(),22,C.green)+'Alarma</div><div class="pill '+info[1]+'">'+info[0]+'</div></div><div class="grid2">';
+  modes.forEach(function(m){
+    h+='<button class="abtn'+(a===m[3]?' cur':'')+'" data-act="alarm" data-svc="'+m[2]+'" data-name="'+m[0]+'">'+ic(m[4],26,a===m[3]?'#7ee2a8':null)+'<div><div class="nm">'+m[0]+'</div><div class="stt">'+m[1]+'</div></div></button>';
+  });
+  h+='</div></div>';
+  h+='<div class="card"><div class="ct">'+ic('cam',20)+'Cámara</div><div class="cam'+(cam==='on'?' alert':'')+'"><div class="ic">'+ic('cam',28)+'</div><div><div class="big">'+(bad(cam)?'Sin datos':(cam==='on'?'Persona detectada':'Sin detecciones'))+'</div><div class="lbl" style="margin-top:3px">Vídeo en directo: app de la cámara</div></div></div></div>';
+  h+='<div class="card"><div class="ct">'+ic('shield',22,C.slate)+'Detectores</div><div class="grid2">';
+  E.detectors.forEach(function(d){ var s=detState(d); var b=batInfo(d); h+='<div class="det '+s[0]+'">'+ic(d[2]==='smoke'?'smoke':'wateralert',26,s[0]==='alert'?'#ff7a7a':(s[0]==='ok'?'#7ee2a8':null))+'<div><div class="nm">'+d[0]+'</div><div class="stt">'+s[1]+'</div>'+(b?'<div class="stt" style="font-size:12px;'+(b.low?'color:var(--amber);font-weight:500':'')+'">'+(b.low?'⚠ ':'')+b.txt+'</div>':'')+'</div></div>'; });
+  return h+'</div></div>';
+}
+
+/* ===== Energía ===== */
+var MES3=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+function eur(v,d){ return fmt(v,d===undefined?2:d)+' €'; }
+function lastFact(){ if(!FACT.length) return null; return FACT.slice().sort(function(a,b){return a.p<b.p?-1:1;})[FACT.length-1]; }
+function facturaTxt(){ var v=st(E.energy.factura); if(isNum(v)) return val(E.energy.factura,2); var f=lastFact(); return f?eur(f.total):'sin datos'; }
+function monthKey(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1); }
+function chartData(){
+  var now=new Date(), cur=monthKey(now), prev=monthKey(new Date(now.getFullYear(),now.getMonth()-1,1)), map={}, en=E.energy;
+  FACT.forEach(function(f){ map[f.p]={p:f.p,pay:f.facturado,sun:Math.max(0,f.medido-f.facturado),tipo:'fact'}; });
+  var mA=st(en.mesAnt), m0=st(en.mes);
+  if(!map[prev]&&isNum(mA)) map[prev]={p:prev,raw:parseFloat(mA),tipo:'raw'};
+  if(isNum(m0)) map[cur]={p:cur,raw:parseFloat(m0),tipo:'cur'};
+  return Object.keys(map).sort().slice(-12).map(function(k){return map[k];});
+}
+function screen3(){
+  var en=E.energy, now=new Date(), c=E.contrato;
+  var ul=st(en.ultimo), m0=st(en.mes), mA=st(en.mesAnt);
+  var dias0=Math.max(1,now.getDate()-E.retrasoDatadis), diasA=new Date(now.getFullYear(),now.getMonth(),0).getDate();
+  var h='<div class="grid2">'+
+    stat('bolt','Último día publicado',isNum(ul)?fmt(ul,2)+'<small>kWh</small>':'sin datos','Datos de la distribuidora, unos '+E.retrasoDatadis+' días de retraso',false,'span2')+
+    stat('clock','Este mes',isNum(m0)?fmt(m0,0)+'<small>kWh</small>':'sin datos',isNum(m0)?'≈ '+fmt(parseFloat(m0)/dias0,1)+' kWh al día':'')+
+    stat('clock','Mes anterior',isNum(mA)?fmt(mA,0)+'<small>kWh</small>':'sin datos',isNum(mA)?'≈ '+fmt(parseFloat(mA)/diasA,1)+' kWh al día':'')+'</div>';
+  var cd=chartData(), mx=0; cd.forEach(function(x){ var t=x.tipo==='fact'?x.pay+x.sun:x.raw; if(t>mx) mx=t; });
+  var H=150;
+  h+='<div class="card"><div class="ct">'+ic('bolt',22,C.yellow)+'Consumo por meses (kWh)</div>';
+  if(!cd.length) h+='<div class="lbl">Aún no hay datos de meses</div>';
+  else{
+    h+='<div class="chart">';
+    cd.forEach(function(x){
+      var parts='', tot=0, mm=parseInt(x.p.slice(5),10)-1;
+      if(x.tipo==='fact'){ tot=x.pay+x.sun; var cr=CAR[x.p]||0; parts='<div class="seg sun" style="height:'+Math.round(x.sun/mx*H)+'px"></div><div class="seg pay" style="height:'+Math.round(Math.max(0,x.pay-cr)/mx*H)+'px"></div>'+(cr?'<div class="seg car" style="height:'+Math.max(3,Math.round(cr/mx*H))+'px"></div>':''); }
+      else { tot=x.raw; var cr2=CAR[x.p]||0; parts='<div class="seg '+(x.tipo==='cur'?'cur':'raw')+'" style="height:'+Math.round(Math.max(0,x.raw-cr2)/mx*H)+'px"></div>'+(cr2?'<div class="seg car" style="height:'+Math.max(3,Math.round(cr2/mx*H))+'px"></div>':''); }
+      h+='<div class="bcol"><div class="bval">'+fmt(tot,0)+'</div><div class="bars">'+parts+'</div><div class="blab">'+MES3[mm]+'</div></div>';
+    });
+    h+='</div><div class="legend"><span><i style="background:#6aa8ff"></i>Pagado a la compañía</span><span><i style="background:#7ee2a8"></i>Cubierto por placas</span><span><i style="background:#f5a25b"></i>Coche eléctrico</span><span><i style="background:#8da2cf"></i>Dato del contador</span></div>';
+  }
+  h+='</div>';
+  var f=lastFact(), yr=String(now.getFullYear());
+  var fy=FACT.filter(function(x){return x.p.slice(0,4)===yr;});
+  if(!fy.length&&f){ yr=f.p.slice(0,4); fy=FACT.filter(function(x){return x.p.slice(0,4)===yr;}); }
+  var sA=0,sK=0,nM=0; fy.forEach(function(x){ sA+=x.ahorro_eur; sK+=x.descuento_kwh; if(x.descuento_kwh>0||x.excedente_kwh>0) nM++; });
+  h+='<div class="card"><div class="ct">'+ic('sun',22,C.green)+'Placas de la comunidad</div>';
+  if(f){
+    h+='<div class="lbl">Ahorro acumulado en '+yr+' · '+nM+(nM===1?' mes':' meses')+'</div><div class="bignum" style="color:var(--green);margin:2px 0 6px">≈ '+fmt(sA,0)+'<small>€</small></div>'+
+      '<div class="kv"><span>Energía descontada</span><span class="g">'+fmt(sK,0)+' kWh</span></div>'+
+      '<div class="kv"><span>Último periodo ('+MES3[parseInt(f.p.slice(5),10)-1]+')</span><span class="g">≈ '+fmt(f.ahorro_eur,1)+' €</span></div>';
+  } else h+='<div class="lbl">Aún sin facturas</div>';
+  h+='<div class="note">Estimación con tus facturas, impuestos incluidos.</div></div>';
+  var yk=0; Object.keys(CAR).forEach(function(k){ if(k.slice(0,4)===String(now.getFullYear())) yk+=CAR[k]; });
+  var fk=c.precioKwh*1.0511*1.21, nmes=Math.max(1,now.getMonth()+1), ant=CARY[now.getFullYear()-1];
+  h+='<div class="card"><div class="ct">'+ic('car',22,'#f5a25b')+'Coche eléctrico '+now.getFullYear()+'</div>'+
+    '<div class="bignum">'+fmt(yk,0)+'<small>kWh</small> <span style="font-size:22px;color:var(--amber)">≈ '+fmt(yk*fk,0)+' €</span></div>'+
+    '<div class="kv" style="margin-top:8px"><span>Media al mes (hasta hoy)</span><span>'+fmt(yk/nmes,0)+' kWh · '+fmt(yk*fk/nmes,0)+' €</span></div>'+
+    (ant?'<div class="kv"><span>Año '+(now.getFullYear()-1)+'</span><span>'+fmt(ant,0)+' kWh · '+fmt(ant*fk,0)+' €</span></div>':'')+'</div>';
+  var fin=new Date(c.fin+'T00:00:00'), dl=Math.round((fin-now)/86400000);
+  h+='<div class="card"><div class="ct">'+ic('gauge',20)+'Contrato y factura</div>'+
+    '<div class="kv"><span>Tarifa</span><span>'+c.tarifa+'</span></div>'+
+    '<div class="kv"><span>Potencia contratada</span><span>'+E.potenciaContratada+'</span></div>'+
+    '<div class="kv"><span>Energía (sin impuestos)</span><span>'+fmt(c.precioKwh,3)+' €/kWh</span></div>'+
+    '<div class="kv"><span>Última factura</span><span>'+facturaTxt()+'</span></div>'+
+    '<div class="kv"><span>Fin de contrato</span><span>'+fin.getDate()+' '+MES3[fin.getMonth()]+' '+fin.getFullYear()+(dl>0?' · '+dl+' días':'')+'</span></div></div>';
+  return h;
+}
+
+/* ===== Música ===== */
+function curPlayer(){ var n=E.music.players.length; return E.music.players[Math.max(0,Math.min(mpSel,n-1))]; }
+function mpPos(id){
+  var p=at(id,'media_position'), u=at(id,'media_position_updated_at');
+  if(!isNum(p)) return null; p=parseFloat(p);
+  if(st(id)==='playing'&&u){ var d=(Date.now()-new Date(u).getTime())/1000; if(d>0&&d<86400) p+=d; }
+  return p;
+}
+function mmss(s){ if(!isNum(s)) return '--:--'; s=Math.max(0,Math.round(s)); return Math.floor(s/60)+':'+pad(s%60); }
+function mpProgress(id){
+  var pos=mpPos(id), dur=at(id,'media_duration');
+  if(pos===null||!isNum(dur)||parseFloat(dur)<=0) return {pct:0,cur:'--:--',dur:'--:--'};
+  dur=parseFloat(dur); return {pct:Math.max(0,Math.min(100,pos/dur*100)),cur:mmss(pos),dur:mmss(dur)};
+}
+function screen4(){
+  var pl=E.music.players, p=curPlayer(), id=p[1], favId=p[2], s=st(id), h='';
+  if(pl.length>1){
+    h+='<div class="mpick">';
+    pl.forEach(function(x,i){ h+='<button class="mchip'+(i===Math.max(0,Math.min(mpSel,pl.length-1))?' cur':'')+'" data-act="mpick" data-i="'+i+'">'+esc(x[0])+'</button>'; });
+    h+='</div>';
+  }
+  if(bad(s)){
+    return h+'<div class="card mempty">'+ic('musicoff',54,C.muted)+'<div class="big">Reproductor no disponible</div><div class="lbl">'+esc(p[0])+' no está conectado ahora. Abre la app de música en ese dispositivo y vuelve aquí.</div></div>';
+  }
+  var title=at(id,'media_title'), artist=at(id,'media_artist'), album=at(id,'media_album_name'), pic=(at(id,'entity_picture_local')||at(id,'entity_picture'));
+  var playing=(s==='playing'), has=!!title;
+  var pg=mpProgress(id), vol=at(id,'volume_level'), muted=at(id,'is_volume_muted')===true;
+  h+='<div class="card"><div class="mcover">'+(pic?'<img src="'+esc(pic)+'" alt="">':ic('music',72))+'</div>'+
+    '<div class="mtitle">'+(has?esc(title):(s==='off'?'Reproductor apagado':'Nada sonando'))+'</div>'+
+    '<div class="martist">'+(has?esc([artist,album].filter(Boolean).join(' · ')):'&nbsp;')+'</div>'+
+    '<div class="mprog"><div class="mbar"><i id="mp-bar" style="width:'+pg.pct.toFixed(1)+'%"></i></div><div class="mtimes"><span id="mp-cur">'+pg.cur+'</span><span id="mp-dur">'+pg.dur+'</span></div></div>'+
+    '<div class="mctl"><button class="mb" data-act="mprev">'+ic('skipprev',28)+'</button><button class="mb big" data-act="mplay">'+ic(playing?'pause':'play',38)+'</button><button class="mb" data-act="mnext">'+ic('skipnext',28)+'</button></div>'+
+    '<div class="mvol"><button class="mb" data-act="mvol" data-d="-0.05">'+ic('volminus',24)+'</button><div class="vb"><div class="mbar"><i style="width:'+(isNum(vol)?Math.round(parseFloat(vol)*100):0)+'%;background:'+(muted?'var(--muted)':'var(--green)')+'"></i></div><div class="vt">'+(muted?'Silenciado':(isNum(vol)?'Volumen '+Math.round(parseFloat(vol)*100)+' %':'Volumen'))+'</div></div><button class="mb" data-act="mvol" data-d="0.05">'+ic('volplus',24)+'</button><button class="mb" data-act="mmute">'+ic('voloff',24,muted?'#ff7a7a':null)+'</button></div>'+
+    (favId?'<div class="mfoot"><button class="mfav" data-act="mfav" data-ent="'+esc(favId)+'">'+ic('heart',20,C.pink)+'<span>Marcar como favorita</span></button></div>':'')+'</div>';
+  return h;
+}
+function tickMusic(){
+  var id=curPlayer()[1]; if(st(id)!=='playing') return;
+  var pg=mpProgress(id), b=document.getElementById('mp-bar'), c=document.getElementById('mp-cur');
+  if(b) b.style.width=pg.pct.toFixed(1)+'%'; if(c) c.textContent=pg.cur;
+}
+
+function loadFacturas(){
+  fetch('/local/panel/facturas.json?t='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(j){
+    if(j&&j.length){ FACT=j; schedule(); }
+  }).catch(function(){});
+}
+var last={};
+function setHTML(id,html){ if(last[id]!==html){ last[id]=html; document.getElementById(id).innerHTML=html; } }
+function render(){
+  setHTML('clock',headerClock()); setHTML('people',headerPeople()); setHTML('nav',headerNav());
+  setHTML('sc0',screen0()); setHTML('sc1',screen1()); setHTML('sc2',screen2()); setHTML('sc3',screen3()); setHTML('sc4',screen4());
+  var ah=alertHtml(); setHTML('alertbar',ah); document.getElementById('alertbar').className=ah?'show':'';
+  if(modalType==='climate') renderClimateModal();
+}
+var rq=false; function schedule(){ if(rq) return; rq=true; setTimeout(function(){rq=false;render();},80); }
+
+/* ===== Navegación (pestañas abajo o deslizar hacia los lados) ===== */
+function goto(n){ screen=Math.max(0,Math.min(NSCREENS-1,n)); document.getElementById('track').style.transform='translateX('+(-screen*(100/NSCREENS))+'%)'; last.nav=null; setHTML('nav',headerNav()); }
+function resetIdle(){}
+var tx=0,ty=0,tt=0,tracking=false;
+document.addEventListener('touchstart',function(e){ if(modalType||(e.target.closest&&e.target.closest('.strip'))) { tracking=false; return; } var t=e.touches[0]; tx=t.clientX; ty=t.clientY; tt=Date.now(); tracking=true; },{passive:true});
+document.addEventListener('touchend',function(e){ if(!tracking) return; tracking=false; var t=e.changedTouches[0]; var dx=t.clientX-tx, dy=t.clientY-ty;
+  if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.6&&Date.now()-tt<800){ goto(dx<0?screen+1:screen-1); } },{passive:true});
+
+/* ===== Modal y avisos ===== */
+var modalType=null, modalCtx=null;
+function openModal(html,type,ctx){ modalType=type; modalCtx=ctx; document.getElementById('mbox').innerHTML=html; document.getElementById('modal').className='show'; }
+function closeModal(){ modalType=null; modalCtx=null; document.getElementById('modal').className=''; resetIdle(); }
+function confirmBox(title,text,okLabel,fn){
+  openModal('<h2>'+title+'</h2><p>'+text+'</p><div class="mbtns"><button class="mbtn" data-act="mcancel">Cancelar</button><button class="mbtn go" data-act="mok">'+okLabel+'</button></div>','confirm',fn);
+}
+var toastT=null;
+function toast(msg){ var t=document.getElementById('toast'); t.textContent=msg; t.style.display='block'; if(toastT) clearTimeout(toastT); toastT=setTimeout(function(){t.style.display='none';},3200); }
+function renderClimateModal(){
+  var id=modalCtx; if(!id) return; var s=st(id), tg=at(id,'temperature'), cur=at(id,'current_temperature'), modes=at(id,'hvac_modes')||['off','cool','heat'];
+  var name='Aire'; E.climates.forEach(function(c){ if(c[1]===id) name=(c[2]||'Aire')+' · '+c[0]; });
+  var h='<h2>'+name+'</h2><p>Temperatura actual: '+(isNum(cur)?fmt(cur)+'°':'sin datos')+'</p><div class="modes">';
+  modes.forEach(function(m){ h+='<button class="mbtn'+(s===m?' cur':'')+'" data-act="hvac" data-mode="'+m+'">'+(HV[m]||m)+'</button>'; });
+  h+='</div>';
+  if(s!=='off'&&isNum(tg)) h+='<div class="tctl"><button class="mbtn" data-act="tdelta" data-d="-1">−</button><div class="tv">'+fmt(tg)+'°</div><button class="mbtn" data-act="tdelta" data-d="1">+</button></div>';
+  h+='<div class="mbtns"><button class="mbtn go" data-act="mcancel">Cerrar</button></div>';
+  document.getElementById('mbox').innerHTML=h;
+}
+
+/* ===== Acciones ===== */
+function call(domain,service,data,entity){
+  if(!connected){ toast('Sin conexión con Home Assistant'); return; }
+  var m={type:'call_service',domain:domain,service:service,service_data:data||{}};
+  if(entity) m.target={entity_id:entity};
+  send(m,function(r){ if(!r.success) toast('Error: '+((r.error&&r.error.message)||'no se pudo ejecutar')); });
+}
+document.addEventListener('click',function(e){
+  var el=e.target; while(el&&el!==document&&!(el.getAttribute&&el.getAttribute('data-act'))) el=el.parentNode;
+  if(!el||el===document) return;
+  resetIdle();
+  var act=el.getAttribute('data-act'), ent=el.getAttribute('data-ent');
+  if(act==='goto') goto(parseInt(el.getAttribute('data-n'),10));
+  else if(act==='toggle'){ if(bad(st(ent))) return toast('Dispositivo no disponible'); call(ent.split('.')[0],'toggle',{},ent); }
+  else if(act==='script'){ var ask=el.getAttribute('data-ask'), nm=el.getAttribute('data-name');
+    var run=function(){ call('script','turn_on',{},ent); toast(nm+': orden enviada'); };
+    if(ask) confirmBox(nm,ask,'Ejecutar',run); else run(); }
+  else if(act==='alarm'){ var svc=el.getAttribute('data-svc'), nm2=el.getAttribute('data-name');
+    confirmBox('Alarma: '+nm2,'¿Cambiar la alarma a "'+nm2+'"? Puede tardar unos minutos en confirmarse.','Confirmar',function(){ call('alarm_control_panel',svc,{},E.alarm); toast('Alarma: orden enviada'); }); }
+  else if(act==='climate'){ if(bad(st(ent))) return toast('Aire no disponible'); openModal('', 'climate', ent); renderClimateModal(); }
+  else if(act==='hvac'){ call('climate','set_hvac_mode',{hvac_mode:el.getAttribute('data-mode')},modalCtx); }
+  else if(act==='tdelta'){ var id=modalCtx, step=parseFloat(at(id,'target_temp_step'))||1, t=parseFloat(at(id,'temperature')), mn=parseFloat(at(id,'min_temp'))||16, mx=parseFloat(at(id,'max_temp'))||30;
+    var nt=Math.max(mn,Math.min(mx,t+parseFloat(el.getAttribute('data-d'))*step)); call('climate','set_temperature',{temperature:nt},id); }
+  else if(act==='mcancel') closeModal();
+  else if(act==='mok'){ var f=modalCtx; closeModal(); if(f) f(); }
+  else if(act==='mpick'){ mpSel=parseInt(el.getAttribute('data-i'),10)||0; last.sc4=null; schedule(); }
+  else if(act==='mplay'){ call('media_player','media_play_pause',{},curPlayer()[1]); }
+  else if(act==='mnext'){ call('media_player','media_next_track',{},curPlayer()[1]); }
+  else if(act==='mprev'){ call('media_player','media_previous_track',{},curPlayer()[1]); }
+  else if(act==='mvol'){ var pid=curPlayer()[1], v=parseFloat(at(pid,'volume_level')); if(isNaN(v)) return toast('Este reproductor no permite cambiar el volumen');
+    call('media_player','volume_set',{volume_level:Math.max(0,Math.min(1,Math.round((v+parseFloat(el.getAttribute('data-d')))*100)/100))},pid); }
+  else if(act==='mmute'){ var pid2=curPlayer()[1]; call('media_player','volume_mute',{is_volume_muted:at(pid2,'is_volume_muted')!==true},pid2); }
+  else if(act==='mfav'){ call('button','press',{},ent); toast('Marcada como favorita'); }
+});
+/* ===== Conexión con Home Assistant (usa la sesión ya iniciada en este navegador) ===== */
+var ws=null, msgId=0, pending={}, subId=0, retryT=null, lastMsg=0, offT=null;
+function getTokens(){ try{ return JSON.parse(localStorage.getItem('hassTokens')); }catch(e){ return null; } }
+function freshToken(cb){
+  var t=getTokens();
+  if(!t||!t.access_token){ cb(null,'auth'); return; }
+  if(Date.now()<(t.expires||0)-15000){ cb(t); return; }
+  var body='client_id='+encodeURIComponent(t.clientId)+'&grant_type=refresh_token&refresh_token='+encodeURIComponent(t.refresh_token);
+  fetch(location.origin+'/auth/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+    .then(function(r){return r.json();})
+    .then(function(j){
+      if(j&&j.access_token){ t.access_token=j.access_token; t.expires=Date.now()+(j.expires_in||1800)*1000; t.expires_in=j.expires_in; try{localStorage.setItem('hassTokens',JSON.stringify(t));}catch(e){} cb(t); }
+      else cb(null,'auth');
+    }).catch(function(){ cb(null,'net'); });
+}
+function send(m,cb){ m.id=++msgId; if(cb) pending[m.id]=cb; try{ ws.send(JSON.stringify(m)); }catch(e){} return m.id; }
+function showOver(h){ var o=document.getElementById('over'); o.innerHTML=h; o.className='show'; }
+function hideOver(){ document.getElementById('over').className=''; }
+function showAuth(){ showOver('<h2>Falta iniciar sesión</h2><p>Abre Home Assistant una vez en este navegador e inicia sesión con el usuario de la tablet. Después vuelve a esta página.</p><a href="/">Abrir Home Assistant</a>'); }
+function retry(){ setConn(false); if(retryT) clearTimeout(retryT); retryT=setTimeout(connect,5000); }
+function setConn(ok){
+  connected=ok; document.getElementById('dot').className=ok?'':'off';
+  if(ok){ if(offT){clearTimeout(offT);offT=null;} hideOver(); }
+  else if(!offT){ offT=setTimeout(function(){ if(!connected) showOver('<h2>Sin conexión con Home Assistant</h2><p>Reintentando automáticamente…</p>'); },12000); }
+}
+function loadForecast(){
+  if(!connected) return;
+  send({type:'call_service',domain:'weather',service:'get_forecasts',service_data:{type:'daily'},target:{entity_id:E.weather},return_response:true},function(r){
+    try{ var f=r.result.response[E.weather].forecast; if(f&&f.length){ forecast=f; schedule(); } }catch(e){}
+  });
+}
+function loadHourly(){
+  if(!connected) return;
+  send({type:'call_service',domain:'weather',service:'get_forecasts',service_data:{type:'hourly'},target:{entity_id:E.weather},return_response:true},function(r){
+    try{ var f=r.result.response[E.weather].forecast; if(f&&f.length){ hourly=f; hourlyErr=false; schedule(); } else { hourlyErr=true; schedule(); } }catch(e){ hourlyErr=true; schedule(); }
+  });
+}
+function applyEvent(ev){
+  var id,x;
+  if(ev.a){ for(id in ev.a){ x=ev.a[id]; S[id]={s:x.s,a:x.a||{}}; } }
+  if(ev.c){ for(id in ev.c){ var d=ev.c[id], cur=S[id]||(S[id]={s:undefined,a:{}}), p=d['+'], m=d['-'];
+    if(p){ if(p.s!==undefined) cur.s=p.s; if(p.a) cur.a=Object.assign({},cur.a,p.a); }
+    if(m&&m.a){ var a2=Object.assign({},cur.a); m.a.forEach(function(k){delete a2[k];}); cur.a=a2; } } }
+  if(ev.r){ ev.r.forEach(function(i){delete S[i];}); }
+  schedule();
+}
+function connect(){
+  freshToken(function(t,err){
+    if(!t){ if(err==='net') retry(); else showAuth(); return; }
+    var sock; try{ sock=new WebSocket(location.origin.replace(/^http/,'ws')+'/api/websocket'); }catch(e){ retry(); return; }
+    ws=sock; pending={};
+    sock.onmessage=function(ev){
+      lastMsg=Date.now(); var m; try{ m=JSON.parse(ev.data); }catch(e){ return; }
+      if(m.type==='auth_required') sock.send(JSON.stringify({type:'auth',access_token:t.access_token}));
+      else if(m.type==='auth_ok'){ setConn(true); subId=send({type:'subscribe_entities',entity_ids:WATCH}); loadForecast(); loadHourly(); }
+      else if(m.type==='auth_invalid'){ showAuth(); }
+      else if(m.type==='event'&&m.id===subId) applyEvent(m.event);
+      else if(m.type==='result'&&pending[m.id]){ var cb=pending[m.id]; delete pending[m.id]; cb(m); }
+    };
+    sock.onclose=function(){ if(ws===sock) retry(); };
+    sock.onerror=function(){ try{sock.close();}catch(e){} };
+  });
+}
+setInterval(function(){ if(connected){ if(Date.now()-lastMsg>75000){ try{ws.close();}catch(e){} } else send({type:'ping'}); } },30000);
+setInterval(loadForecast,30*60*1000); setInterval(loadHourly,15*60*1000);
+setInterval(function(){ last.clock=null; setHTML('clock',headerClock()); },5000);
+setInterval(tickMusic,1000);
+
+render(); goto(0); connect(); loadFacturas(); setInterval(loadFacturas,6*3600*1000);
+document.addEventListener('visibilitychange',function(){ if(!document.hidden&&!connected){ connect(); } });
+
+})();
+</script>
+</body>
+</html>

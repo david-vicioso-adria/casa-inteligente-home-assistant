@@ -1,0 +1,34 @@
+# Seguridad - Calefactor baño apagado a las 2 horas (apartado 10.5)
+# Estado: el primer disparador (2 horas) está COMPROBADO en la casa del autor (probado con 2 minutos).
+#         El segundo disparador (arranque de Home Assistant), la espera y la condición son una mejora
+#         añadida en la revisión del libro: PENDIENTE DE PROBAR en la casa del autor.
+# Qué hace: si el calefactor lleva 2 horas seguidas en modo calor, lo apaga. Y si Home Assistant
+#           arranca con el calefactor encendido, también lo apaga, porque tras un reinicio la cuenta
+#           de las 2 horas se pierde y puede que no vuelva a empezar.
+# Para probarla: cambia temporalmente "hours: 2" por "minutes: 2". Para probar el arranque, enciende
+#                el calefactor y reinicia Home Assistant: a los 2 minutos de arrancar debe apagarse.
+alias: Seguridad - Calefactor baño apagado a las 2 horas
+description: >-
+  Apaga el calefactor del baño si lleva 2 horas encendido, o si Home Assistant
+  arranca con él encendido
+triggers:
+  - trigger: state
+    entity_id: climate.calefactor_bano    # <- tu calefactor
+    to: heat
+    for:
+      hours: 2
+  - trigger: homeassistant
+    event: start
+actions:
+  # Da tiempo a que el calefactor se conecte después de un arranque
+  - delay: "00:02:00"
+  # Solo sigue si el calefactor sigue en modo calor
+  - condition: state
+    entity_id: climate.calefactor_bano    # <- tu calefactor
+    state: heat
+  - action: climate.set_hvac_mode
+    target:
+      entity_id: climate.calefactor_bano  # <- tu calefactor
+    data:
+      hvac_mode: "off"
+mode: single

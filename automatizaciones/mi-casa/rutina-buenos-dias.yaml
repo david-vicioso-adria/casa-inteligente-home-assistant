@@ -1,0 +1,55 @@
+# Rutina - Buenos días (versión de mi casa, ampliada respecto a los capítulos 10 y 11)
+# Estado: EN USO en la casa del autor desde octubre de 2026.
+# Por qué existe: un día el calefactor no se encendió porque la nube del fabricante
+#   rechazó la orden. Esta versión repite la orden hasta 3 veces, con 1 minuto entre
+#   intentos, y avisa al móvil si no lo consigue.
+# Adapta: la luz, el calefactor y la acción notify.mobile_app_... de TU móvil.
+alias: Rutina - Buenos días
+description: >-
+  Enciende la luz del comedor al 40 % y el calefactor del baño a las 7:00, de
+  lunes a viernes, si hay alguien en casa. Si la nube rechaza la orden del
+  calefactor, la repite hasta 3 veces y avisa si no lo consigue.
+triggers:
+  - trigger: time
+    at: "07:00:00"
+conditions:
+  - condition: time
+    weekday: [mon, tue, wed, thu, fri]
+  # zone.home vale el número de personas en casa: > 0 = hay alguien
+  - condition: numeric_state
+    entity_id: zone.home
+    above: 0
+actions:
+  - action: light.turn_on
+    target:
+      entity_id: light.luz_comedor          # <- tu luz
+    data:
+      brightness_pct: 40
+    continue_on_error: true
+  - repeat:
+      sequence:
+        - action: climate.set_hvac_mode
+          target:
+            entity_id: climate.calefactor_bano   # <- tu calefactor
+          data:
+            hvac_mode: heat
+          continue_on_error: true            # si la nube falla, no se detiene: lo vuelve a intentar
+        - delay: "00:01:00"
+      until:
+        - condition: template
+          value_template: >-
+            {{ is_state('climate.calefactor_bano', 'heat') or repeat.index >= 3 }}
+  - if:
+      - condition: not
+        conditions:
+          - condition: state
+            entity_id: climate.calefactor_bano
+            state: heat
+    then:
+      - action: notify.mobile_app_mi_movil
+        data:
+          title: Calefactor del baño
+          message: >-
+            No se ha podido encender el calefactor del baño tras 3 intentos.
+            Enciéndelo desde el panel o desde su aplicación.
+mode: single

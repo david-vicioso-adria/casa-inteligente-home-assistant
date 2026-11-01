@@ -1,0 +1,16 @@
+# Seguridad - Aviso de humo (apartado 12.1)
+# Estado: EJEMPLO ILUSTRATIVO del libro (la idea es la que usa el autor;
+# la versión ampliada que usa en su casa está en mi-casa/).
+# Adapta: el detector y la acción notify.mobile_app_... de TU móvil.
+alias: Seguridad - Aviso de humo
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.humo_pasillo
+    from: "off"        # evita avisos falsos al reconectarse tras un corte
+    to: "on"
+actions:
+  - action: notify.mobile_app_mi_movil
+    data:
+      title: "¡Humo en casa!"
+      message: "El detector del pasillo ha detectado humo."
+mode: single

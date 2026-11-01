@@ -1,0 +1,21 @@
+# Seguridad - Aviso de fuga de agua (apartado 12.2)
+# Estado: EJEMPLO ILUSTRATIVO del libro (la versión ampliada de la casa del autor está en mi-casa/).
+# Un disparador por detector; su "id" es el lugar que sale en el mensaje.
+alias: Seguridad - Aviso de fuga de agua
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.agua_cocina
+    from: "off"
+    to: "on"
+    id: la cocina
+  - trigger: state
+    entity_id: binary_sensor.agua_terraza
+    from: "off"
+    to: "on"
+    id: la terraza
+actions:
+  - action: notify.mobile_app_mi_movil
+    data:
+      title: "¡Fuga de agua!"
+      message: "Hay agua en {{ trigger.id }}."
+mode: queued           # si saltan dos a la vez, llegan los dos avisos
