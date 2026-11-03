@@ -3,6 +3,12 @@
 Códigos y prompts del libro *Una casa inteligente con Home Assistant*, de David Vicioso Adrià.
 Libro independiente, no afiliado al proyecto Home Assistant ni a la Open Home Foundation.
 
+## El libro
+
+📖 **[Una casa inteligente con Home Assistant](https://amzn.eu/d/0gwAR9Nm)**, en Amazon, en papel y en versión electrónica.
+
+Este repositorio reúne los códigos del libro para que no tengas que copiarlos a mano. El libro explica paso a paso qué hace cada uno, cómo adaptarlo a tu casa y qué errores evitar.
+
 ## Qué hay aquí
 
 | Carpeta | Contenido | Capítulo |
